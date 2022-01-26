@@ -1,0 +1,592 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Content\cards\card_back.png" />
+    <None Remove="Content\cards\card_clubs_A.png" />
+    <None Remove="Content\cards\card_clubs_J.png" />
+    <None Remove="Content\cards\card_clubs_K.png" />
+    <None Remove="Content\cards\card_clubs_Q.png" />
+    <None Remove="Content\cards\card_clubs_T.png" />
+    <None Remove="Content\cards\card_diamonds_A.png" />
+    <None Remove="Content\cards\card_diamonds_J.png" />
+    <None Remove="Content\cards\card_diamonds_K.png" />
+    <None Remove="Content\cards\card_diamonds_Q.png" />
+    <None Remove="Content\cards\card_diamonds_T.png" />
+    <None Remove="Content\cards\card_empty.png" />
+    <None Remove="Content\cards\card_hearts_A.png" />
+    <None Remove="Content\cards\card_hearts_J.png" />
+    <None Remove="Content\cards\card_hearts_K.png" />
+    <None Remove="Content\cards\card_hearts_Q.png" />
+    <None Remove="Content\cards\card_hearts_T.png" />
+    <None Remove="Content\cards\card_spades_A.png" />
+    <None Remove="Content\cards\card_spades_J.png" />
+    <None Remove="Content\cards\card_spades_K.png" />
+    <None Remove="Content\cards\card_spades_Q.png" />
+    <None Remove="Content\cards\card_spades_T.png" />
+    <None Remove="Content\nez\effects\Bevels.mgfxo" />
+    <None Remove="Content\nez\effects\BloomCombine.mgfxo" />
+    <None Remove="Content\nez\effects\BloomExtract.mgfxo" />
+    <None Remove="Content\nez\effects\Crosshatch.mgfxo" />
+    <None Remove="Content\nez\effects\DeferredLighting.mgfxo" />
+    <None Remove="Content\nez\effects\DeferredSprite.mgfxo" />
+    <None Remove="Content\nez\effects\Dissolve.mgfxo" />
+    <None Remove="Content\nez\effects\Dots.mgfxo" />
+    <None Remove="Content\nez\effects\ForwardLighting.mgfxo" />
+    <None Remove="Content\nez\effects\GaussianBlur.mgfxo" />
+    <None Remove="Content\nez\effects\Grayscale.mgfxo" />
+    <None Remove="Content\nez\effects\HeatDistortion.mgfxo" />
+    <None Remove="Content\nez\effects\Invert.mgfxo" />
+    <None Remove="Content\nez\effects\Letterbox.mgfxo" />
+    <None Remove="Content\nez\effects\MultiTexture.mgfxo" />
+    <None Remove="Content\nez\effects\MultiTextureOverlay.mgfxo" />
+    <None Remove="Content\nez\effects\Noise.mgfxo" />
+    <None Remove="Content\nez\effects\PaletteCycler.mgfxo" />
+    <None Remove="Content\nez\effects\PixelGlitch.mgfxo" />
+    <None Remove="Content\nez\effects\PolygonLight.mgfxo" />
+    <None Remove="Content\nez\effects\Reflection.mgfxo" />
+    <None Remove="Content\nez\effects\Scanlines.mgfxo" />
+    <None Remove="Content\nez\effects\Sepia.mgfxo" />
+    <None Remove="Content\nez\effects\SpriteAlphaTest.mgfxo" />
+    <None Remove="Content\nez\effects\SpriteBlinkEffect.mgfxo" />
+    <None Remove="Content\nez\effects\SpriteEffect.mgfxo" />
+    <None Remove="Content\nez\effects\SpriteLightMultiply.mgfxo" />
+    <None Remove="Content\nez\effects\SpriteLines.mgfxo" />
+    <None Remove="Content\nez\effects\StencilLight.mgfxo" />
+    <None Remove="Content\nez\effects\transitions\Squares.mgfxo" />
+    <None Remove="Content\nez\effects\transitions\TextureWipe.mgfxo" />
+    <None Remove="Content\nez\effects\transitions\Wind.mgfxo" />
+    <None Remove="Content\nez\effects\Twist.mgfxo" />
+    <None Remove="Content\nez\effects\Vignette.mgfxo" />
+    <None Remove="Content\nez\FNAEffects\Bevels.fxb" />
+    <None Remove="Content\nez\FNAEffects\BloomCombine.fxb" />
+    <None Remove="Content\nez\FNAEffects\BloomExtract.fxb" />
+    <None Remove="Content\nez\FNAEffects\Crosshatch.fxb" />
+    <None Remove="Content\nez\FNAEffects\DeferredLighting.fxb" />
+    <None Remove="Content\nez\FNAEffects\DeferredSprite.fxb" />
+    <None Remove="Content\nez\FNAEffects\Dissolve.fxb" />
+    <None Remove="Content\nez\FNAEffects\Dots.fxb" />
+    <None Remove="Content\nez\FNAEffects\ForwardLighting.fxb" />
+    <None Remove="Content\nez\FNAEffects\GaussianBlur.fxb" />
+    <None Remove="Content\nez\FNAEffects\Grayscale.fxb" />
+    <None Remove="Content\nez\FNAEffects\HeatDistortion.fxb" />
+    <None Remove="Content\nez\FNAEffects\Invert.fxb" />
+    <None Remove="Content\nez\FNAEffects\Letterbox.fxb" />
+    <None Remove="Content\nez\FNAEffects\MultiTexture.fxb" />
+    <None Remove="Content\nez\FNAEffects\MultiTextureOverlay.fxb" />
+    <None Remove="Content\nez\FNAEffects\Noise.fxb" />
+    <None Remove="Content\nez\FNAEffects\PaletteCycler.fxb" />
+    <None Remove="Content\nez\FNAEffects\PixelGlitch.fxb" />
+    <None Remove="Content\nez\FNAEffects\PolygonLight.fxb" />
+    <None Remove="Content\nez\FNAEffects\Reflection.fxb" />
+    <None Remove="Content\nez\FNAEffects\Scanlines.fxb" />
+    <None Remove="Content\nez\FNAEffects\Sepia.fxb" />
+    <None Remove="Content\nez\FNAEffects\SpriteAlphaTest.fxb" />
+    <None Remove="Content\nez\FNAEffects\SpriteBlinkEffect.fxb" />
+    <None Remove="Content\nez\FNAEffects\SpriteEffect.fxb" />
+    <None Remove="Content\nez\FNAEffects\SpriteLightMultiply.fxb" />
+    <None Remove="Content\nez\FNAEffects\SpriteLines.fxb" />
+    <None Remove="Content\nez\FNAEffects\Squares.fxb" />
+    <None Remove="Content\nez\FNAEffects\StencilLight.fxb" />
+    <None Remove="Content\nez\FNAEffects\TextureWipe.fxb" />
+    <None Remove="Content\nez\FNAEffects\transitions\Squares.fxb" />
+    <None Remove="Content\nez\FNAEffects\transitions\TextureWipe.fxb" />
+    <None Remove="Content\nez\FNAEffects\transitions\Wind.fxb" />
+    <None Remove="Content\nez\FNAEffects\Twist.fxb" />
+    <None Remove="Content\nez\FNAEffects\Vignette.fxb" />
+    <None Remove="Content\nez\FNAEffects\Wind.fxb" />
+    <None Remove="Content\nez\MG3.8Effects\Bevels.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\BloomCombine.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\BloomExtract.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Crosshatch.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\DeferredLighting.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\DeferredSprite.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Dissolve.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Dots.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\ForwardLighting.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\GaussianBlur.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Grayscale.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\HeatDistortion.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Invert.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Letterbox.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\MultiTexture.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\MultiTextureOverlay.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Noise.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\PaletteCycler.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\PixelGlitch.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\PolygonLight.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Reflection.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Scanlines.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Sepia.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\SpriteAlphaTest.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\SpriteBlinkEffect.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\SpriteEffect.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\SpriteLightMultiply.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\SpriteLines.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\StencilLight.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\transitions\Squares.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\transitions\TextureWipe.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\transitions\Wind.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Twist.mgfxo" />
+    <None Remove="Content\nez\MG3.8Effects\Vignette.mgfxo" />
+    <None Remove="Content\nez\textures\heatDistortionNoise.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\angular.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\crissCross.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\diagonalDistort.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\horizontal.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\noise.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\pokemon.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\sawTooth.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\spiral.xnb" />
+    <None Remove="Content\nez\textures\textureWipeTransition\wink.xnb" />
+    <None Remove="Content\title\start_button.png" />
+    <None Remove="Content\title\title.png" />
+    <None Remove="Icon.ico" />
+    <None Remove="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\cards\card_back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_clubs_A.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_clubs_J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_clubs_K.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_clubs_Q.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_clubs_T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_diamonds_A.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_diamonds_J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_diamonds_K.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_diamonds_Q.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_diamonds_T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_hearts_A.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_hearts_J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_hearts_K.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_hearts_Q.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_hearts_T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_spades_A.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_spades_J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_spades_K.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_spades_Q.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\cards\card_spades_T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Bevels.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\BloomCombine.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\BloomExtract.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Crosshatch.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\DeferredLighting.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\DeferredSprite.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Dissolve.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Dots.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\ForwardLighting.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\GaussianBlur.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Grayscale.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\HeatDistortion.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Invert.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Letterbox.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\MultiTexture.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\MultiTextureOverlay.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Noise.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\PaletteCycler.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\PixelGlitch.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\PolygonLight.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Reflection.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Scanlines.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Sepia.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\SpriteAlphaTest.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\SpriteBlinkEffect.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\SpriteEffect.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\SpriteLightMultiply.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\SpriteLines.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\StencilLight.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\transitions\Squares.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\transitions\TextureWipe.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\transitions\Wind.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Twist.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\effects\Vignette.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Bevels.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\BloomCombine.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\BloomExtract.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Crosshatch.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\DeferredLighting.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\DeferredSprite.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Dissolve.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Dots.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\ForwardLighting.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\GaussianBlur.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Grayscale.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\HeatDistortion.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Invert.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Letterbox.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\MultiTexture.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\MultiTextureOverlay.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Noise.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\PaletteCycler.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\PixelGlitch.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\PolygonLight.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Reflection.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Scanlines.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Sepia.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\SpriteAlphaTest.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\SpriteBlinkEffect.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\SpriteEffect.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\SpriteLightMultiply.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\SpriteLines.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Squares.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\StencilLight.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\TextureWipe.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\transitions\Squares.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\transitions\TextureWipe.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\transitions\Wind.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Twist.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Vignette.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\FNAEffects\Wind.fxb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Bevels.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\BloomCombine.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\BloomExtract.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Crosshatch.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\DeferredLighting.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\DeferredSprite.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Dissolve.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Dots.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\ForwardLighting.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\GaussianBlur.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Grayscale.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\HeatDistortion.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Invert.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Letterbox.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\MultiTexture.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\MultiTextureOverlay.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Noise.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\PaletteCycler.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\PixelGlitch.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\PolygonLight.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Reflection.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Scanlines.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Sepia.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\SpriteAlphaTest.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\SpriteBlinkEffect.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\SpriteEffect.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\SpriteLightMultiply.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\SpriteLines.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\StencilLight.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\transitions\Squares.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\transitions\TextureWipe.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\transitions\Wind.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Twist.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\MG3.8Effects\Vignette.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\heatDistortionNoise.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\angular.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\crissCross.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\diagonalDistort.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\horizontal.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\noise.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\pokemon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\sawTooth.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\spiral.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\textures\textureWipeTransition\wink.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\title\start_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\title\title.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Nez-master\Nez.Portable\Nez.MG38.csproj" />
+  </ItemGroup>
+</Project>
