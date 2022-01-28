@@ -20,11 +20,11 @@ namespace Pinochle.Scenes
             ClearColor = Color.Black;
 
             Texture2D titleLogoTexture = Content.LoadTexture("Content/title/title.png");
-            Entity titleLogoEntity = CreateEntity("title", new Vector2(Screen.Width / 2, Screen.Height / 4));
+            Entity titleLogoEntity = CreateEntity("title", new Vector2(Screen.Width / 2f, Screen.Height / 4f));
             titleLogoEntity.AddComponent(new SpriteRenderer(titleLogoTexture));
 
             Texture2D startButtonTexture = Content.LoadTexture("Content/title/start_button.png");
-            Entity startButtonEntity = CreateEntity("startButton", new Vector2(Screen.Width / 2, Screen.Height / 1.5f));
+            Entity startButtonEntity = CreateEntity("startButton", new Vector2(Screen.Width / 2f, Screen.Height / 1.5f));
             startButtonEntity.AddComponent(new SpriteRenderer(startButtonTexture));
             startButtonEntity.AddComponent(new BoxCollider());
             startButtonEntity.Transform.SetScale(0.6f);
